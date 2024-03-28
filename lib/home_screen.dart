@@ -7,6 +7,7 @@ import 'package:news_app/bodies/selected_category_body.dart';
 import 'package:news_app/bodies/setting_body.dart';
 import 'package:news_app/models/category_model.dart';
 import 'package:news_app/screens/search_news_screen.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -25,8 +26,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final notSearchingAppbar=AppBar(
       title: Text(
-        selectedCategoryIndex!= null ? CategoryModel.categories[selectedCategoryIndex!].label :
-        selectedBody == DrawerSelect.categories ? 'News App' : 'Settings',
+        selectedCategoryIndex!= null ? AppLocalizations.of(context)!.categoriesLabel(CategoryModel.categories[selectedCategoryIndex!].label)  :
+        selectedBody == DrawerSelect.categories ?
+        AppLocalizations.of(context)!.newsApp :
+        AppLocalizations.of(context)!.setting,
         style: Theme.of(context).textTheme.titleMedium,
       ),
       actions: [
@@ -70,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 icon: const Icon(Icons.close),
             ),
-            hintText: 'What are you looking for?',
+            hintText: AppLocalizations.of(context)!.whatAreYouLookingFor,
             hintStyle: const TextStyle(
               fontSize: 20
             ),

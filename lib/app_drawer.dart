@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/app_theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 enum DrawerSelect {
 categories,
 settings;
@@ -19,7 +20,7 @@ class AppDrawer extends StatelessWidget {
           alignment: Alignment.bottomCenter,
           padding: const EdgeInsets.all(15),
           child: Text(
-            'News App!',
+            '${AppLocalizations.of(context)!.newsApp}!',
               style:Theme.of(context).textTheme.bodyLarge!.copyWith(
                 color: AppTheme.whiteColor
               )
@@ -37,7 +38,7 @@ class AppDrawer extends StatelessWidget {
                 const Icon(Icons.menu),
                 const SizedBox(width: 8,),
                 Text(
-                  'Categories',
+                  AppLocalizations.of(context)!.categories,
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ],
@@ -56,7 +57,7 @@ class AppDrawer extends StatelessWidget {
                 const Icon(Icons.settings),
                 const SizedBox(width: 8,),
                 Text(
-                  'Setting',
+                  AppLocalizations.of(context)!.setting,
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ],

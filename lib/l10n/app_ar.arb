@@ -1,0 +1,29 @@
+{
+  "newsApp": "برنامج الاخبار",
+  "pickYourCategory": "اخنر المحتوى الذي تريده",
+  "categoriesLabel": "{selectedCategory, select,Sports{رياضة} General{العامة} Science{علوم} Health{صحة} Technology{تكنولوجيا} Business{أعمال} other{فئة}}",
+  "@categoriesLabel": {
+    "description": "A gendered message",
+    "placeholders": {
+      "selectedCategory": {
+        "type": "String"
+      }
+    }
+  },
+  "category": "الفئة",
+  "categories": "الفئات",
+  "setting": "الاعدادات",
+  "sports": "رياضة",
+  "general": "العامة",
+  "business": "أعمال",
+  "science": "علوم",
+  "health": "صحة",
+  "technology": "تكنولوجيا",
+  "language": "اللغة",
+  "english": "الانجليزية",
+  "arabic": "العربية",
+  "whatAreYouLookingFor": "عن ماذا تبحث؟",
+  "noDataFound": "لا يوجد محتوى",
+  "somethingWentWrong": "حدث خطأ ما"
+
+}

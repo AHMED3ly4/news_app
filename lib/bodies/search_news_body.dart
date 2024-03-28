@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:news_app/app_theme.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../apis/apis_services.dart';
 import '../models/news_model.dart';
 import '../widgets/loading_indicator.dart';
@@ -9,7 +9,7 @@ import '../widgets/news_item.dart';
 
 class SearchNewsBody extends StatefulWidget {
   final String search;
-  SearchNewsBody({required this.search});
+  const SearchNewsBody({required this.search});
 
 
   @override
@@ -30,7 +30,7 @@ class _SearchNewsBodyState extends State<SearchNewsBody> {
       final searchResponse = await APIServices.search(search: widget.search , page: searchPage);
       if(searchResponse.status != "ok") {
         Fluttertoast.showToast(
-            msg: "no data found",
+            msg: AppLocalizations.of(context)!.noDataFound,
             toastLength: Toast.LENGTH_SHORT,
             gravity: ToastGravity.BOTTOM,
             timeInSecForIosWeb: 1,
@@ -45,7 +45,6 @@ class _SearchNewsBodyState extends State<SearchNewsBody> {
     setState(() {
       isFirstLoadRunning =false;
     });
-    print(news);
   }
   void loadMoreData()async{
     if(isFirstLoadRunning ==false && isLoadingMoreRunning ==false){
@@ -56,7 +55,7 @@ class _SearchNewsBodyState extends State<SearchNewsBody> {
         final searchResponse = await APIServices.search(search: widget.search , page: searchPage);
       if(searchResponse.status != "ok") {
         Fluttertoast.showToast(
-            msg: "no data found",
+            msg: AppLocalizations.of(context)!.noDataFound,
             toastLength: Toast.LENGTH_SHORT,
             gravity: ToastGravity.BOTTOM,
             timeInSecForIosWeb: 1,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../models/category_model.dart';
 import '../widgets/category_item.dart';
 
@@ -11,7 +11,7 @@ class CategoriesBody extends StatelessWidget {
     return Column(
       children: [
         Text(
-          'Pick your category of interest',
+          AppLocalizations.of(context)!.pickYourCategory,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
         Expanded(

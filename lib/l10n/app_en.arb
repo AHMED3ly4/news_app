@@ -1,0 +1,28 @@
+{
+  "newsApp": "News App",
+  "pickYourCategory": "Pick your category of interest",
+  "categoriesLabel": "{selectedCategory, select,Sports{Sports} General{General} Science{Science} Health{Health} Technology{Technology} Business{Business} other{category}}",
+  "@categoriesLabel": {
+    "description": "A gendered message",
+    "placeholders": {
+      "selectedCategory": {
+        "type": "String"
+      }
+    }
+  },
+  "category": "Category",
+  "categories": "Categories",
+  "setting": "Setting",
+  "sports": "Sports",
+  "general": "General",
+  "business": "Business",
+  "science": "Science",
+  "health": "Health",
+  "technology": "Technology",
+  "language": "Language",
+  "english": "English",
+  "arabic": "Arabic",
+  "whatAreYouLookingFor": "What are you looking for?",
+  "noDataFound": "no data found",
+  "somethingWentWrong": "Something went wrong!"
+}

@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/models/category_model.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../app_theme.dart';
 
@@ -31,7 +31,7 @@ class CategoryItem extends StatelessWidget {
           Image.asset('assets/images/${category.imageName}.png',),
           const Spacer(),
           Text(
-            category.label,
+            AppLocalizations.of(context)!.categoriesLabel(category.label),
             style: Theme.of(context).textTheme.titleMedium,
           ),
         ],
