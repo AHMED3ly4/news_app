@@ -18,7 +18,7 @@ class CategoriesBody extends StatelessWidget {
           child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                childAspectRatio: 0.92
+                childAspectRatio: 0.9
             ),
             itemBuilder: (_, index) => InkWell(
               onTap: (){
